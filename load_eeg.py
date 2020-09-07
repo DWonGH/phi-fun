@@ -8,10 +8,9 @@ import argparse
 import mne
 
 def main(args):
-    filepath = 'Path/to/an/edfFile.edf'
 
     # Load edf file into an mne object:
-    eeg = mne.io.read_raw_edf(filepath)
+    eeg = mne.io.read_raw_edf(args.edfPath)
 
     # Extract the signals to a numpy array:
     eegData = eeg.get_data()
